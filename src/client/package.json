@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "production": "webpack -p"
   },
-  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
+  "author": "Alejandro Peral Taboada alejandroperaltaboada@gmail.com",
   "license": "ISC",
   "dependencies": {
     "react": "^0.14.6",
