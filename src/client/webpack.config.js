@@ -4,6 +4,8 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body'
 });
+var devServerPort = 8080;
+
 
 module.exports = {
   entry: [
@@ -18,5 +20,17 @@ module.exports = {
       {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
     ]
   },
-  plugins: [HTMLWebpackPluginConfig]
+  plugins: [HTMLWebpackPluginConfig],
+  
+  devServer: {
+        port: devServerPort,
+        headers: {
+            "Access-Control-Allow-Origin": "*"
+        },
+        hot: true,
+        inline: false,
+        noCredentials: true,
+        lazy: false, // No watching, compiles on request (cannot be combined with --hot).
+        
+  }
 };
